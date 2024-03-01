@@ -20,7 +20,8 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--text-color);
-  width: clamp(var(--min-section-width), 100%, var(--max-section-width));
+  width: 100%; /* Растягивание на всю ширину на мобильных устройствах */
+  max-width: clamp(var(--min-section-width), 100%, var(--max-section-width));
   background: repeating-linear-gradient(
       90deg,
       var(--background-color),
@@ -64,11 +65,6 @@
   text-transform: uppercase;
 }
 
-.header__link {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  text-transform: uppercase;
-}
-
 .header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
@@ -94,7 +90,6 @@
   text-transform: uppercase;
   background: none;
   border: none;
-  overflow: hidden;
   line-height: normal;
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -117,11 +112,10 @@
 .theme-menu__button::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 0; 
   height: 2px;
   background-color: var(--text-color);
-  transition: transform 0.3s ease;
-  transform: translateX(-100%);
+  transition: width 0.3s ease; 
 }
 
 .theme-menu__button:hover {
@@ -133,12 +127,8 @@
   opacity: 0.6;
 }
 
-.theme-menu__button:focus-visible {
-  opacity: 0.6;
-}
-
 .theme-menu__button:focus-visible::after {
-  transform: translateX(0);
+  width: 100%;
 }
 
 .section {
@@ -193,6 +183,7 @@
   width: 21px;
   height: 21px;
   mix-blend-mode: difference;
+  color: var(--color-icon);
 }
 
 .button {
@@ -204,7 +195,7 @@
   background: none;
   border: 2px solid var(--stroke-color);
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease;
 }
 
 .button::before {
@@ -271,7 +262,6 @@
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
-  border: 1px solid black;
   aspect-ratio: 1 / 1;
 }
 
@@ -362,6 +352,7 @@
   width: 39px;
   height: 39px;
   mix-blend-mode: normal;
+  color: var(--color-icon)
 }
 
 @media (width <=375px) {
@@ -370,7 +361,7 @@
   }
 
   .header__logo {
-    font-size: clamp(2.5rem, 1.8571rem + 5.1429vw, 3.0625rem);
+    font-size: clamp(2.1875rem, 1.6042rem + 6.2222vw, 3.0625rem);
   }
 
   .dialog__text {

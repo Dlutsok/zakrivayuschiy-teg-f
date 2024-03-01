@@ -17,6 +17,7 @@
   --mix-blend-color: var(--page-background);
   --stroke-color: var(--text-color);
   --label-stroke-color: var(--page-background);
+  --color-icon: var(--page-background);
 }
 
 :root.theme-dark {
@@ -31,6 +32,7 @@
   --mix-blend-color: var(--text-color);
   --stroke-color: var(--text-color);
   --label-stroke-color: var(--page-background);
+  --color-icon: var(--text-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,8 +41,8 @@
     --background-color: var(--page-background);
     --background-color-start: #007f0c;
     --background-color-end: #004306;
-    --title-font-weight: 785;
-    --text-font-weight: 465;
+    --title-font-weight: "wght" 785;
+    --text-font-weight: "wght" 465;
     --header-background: var(--page-background);
     --text-color: #00cc14;
     --mix-blend-color: var(--text-color);
