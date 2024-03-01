@@ -112,10 +112,10 @@
 .theme-menu__button::after {
   content: "";
   display: block;
-  width: 0; 
+  width: 0;
   height: 2px;
   background-color: var(--text-color);
-  transition: width 0.3s ease; 
+  transition: width 0.3s ease;
 }
 
 .theme-menu__button:hover {
@@ -352,7 +352,7 @@
   width: 39px;
   height: 39px;
   mix-blend-mode: normal;
-  color: var(--color-icon)
+  color: var(--color-icon);
 }
 
 @media (width <=375px) {
