@@ -20,8 +20,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--text-color);
-  width: 100%; /* Растягивание на всю ширину на мобильных устройствах */
-  max-width: clamp(var(--min-section-width), 100%, var(--max-section-width));
+  max-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   background: repeating-linear-gradient(
       90deg,
       var(--background-color),
@@ -127,6 +126,10 @@
   opacity: 0.6;
 }
 
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
 .theme-menu__button:focus-visible::after {
   width: 100%;
 }
@@ -183,7 +186,7 @@
   width: 21px;
   height: 21px;
   mix-blend-mode: difference;
-  color: var(--color-icon);
+
 }
 
 .button {
@@ -352,7 +355,6 @@
   width: 39px;
   height: 39px;
   mix-blend-mode: normal;
-  color: var(--color-icon);
 }
 
 @media (width <=375px) {
@@ -361,7 +363,7 @@
   }
 
   .header__logo {
-    font-size: clamp(2.1875rem, 1.6042rem + 6.2222vw, 3.0625rem);
+    font-size: clamp(2.5rem, -0.7727rem + 16.3636vw, 3.0625rem);
   }
 
   .dialog__text {
